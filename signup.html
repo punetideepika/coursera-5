@@ -1,0 +1,22 @@
+<!-- signup.html -->
+<form ng-submit="submitSignUpForm()" name="signupForm">
+    <label>First Name:</label>
+    <input type="text" ng-model="formData.firstName" required><br>
+  
+    <label>Last Name:</label>
+    <input type="text" ng-model="formData.lastName" required><br>
+  
+    <label>Email Address:</label>
+    <input type="email" ng-model="formData.email" required><br>
+  
+    <label>Phone Number:</label>
+    <input type="tel" ng-model="formData.phoneNumber" required><br>
+  
+    <label>Favorite Menu Item (short name):</label>
+    <input type="text" ng-model="formData.favoriteMenuItem" required><br>
+  
+    <button type="submit">Submit</button>
+  </form>
+  <p ng-if="isSubmitted">Your information has been saved.</p>
+  <p ng-if="invalidMenuItem">No such menu number exists.</p>
+  
